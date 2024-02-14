@@ -1,3 +1,1 @@
-# carter-clifton.github.io
-This is my website.
-Just testing everything out.
+Website test!
