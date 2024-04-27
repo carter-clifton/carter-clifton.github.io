@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <head>
+        <title>Carter Clifton</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div>
+                <img src="images/left_whale.jpg">
+            </div>
+            <div>
+                <h1>Carter Clifton</h1>
+                <div class="tw-font">
+                    A website created by me.
+                </div>
+            </div>
+            <div>
+                <img src="images/right_whale.jpg">
+            </div>
+        </div>
+
+        <div class="navbar">
+            <a href="index.html"> <i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#" class="selected"> <i class="fa fa-fw fa-puzzle-piece"></i> Extensions</a>
+            <a href="projects.html"> <i class="fa fa-fw fa-code"></i> Projects</a>
+            <a href="other-sites.html" class="right"> <i class="fa fa-fw fa-sitemap"></i> Other Sites</a>
+        </div>
+
+        <div class="row">
+
+            <div class="side">
+
+                <button class="tablinks" onclick="openDialogue(event, 'Home')" id="defaultOpen">Home</button>
+                <button class="tablinks" onclick="openDialogue(event, 'Scientific-Symbols')">Scientific Symbols <i>(Chrome)</i> </button>
+
+            </div>
+
+            <div class="main">
+
+                <div id="Home" class="tabcontent">
+                    <h2 style="margin-top: 0;">Home</h2>
+                    <hr style="color: black;">
+                    <p>This section includes a collection browser extensions I have made.</p>
+                </div>
+
+                <div id="Scientific-Symbols" class="tabcontent">
+                    <h2 style="margin-top: 0;"> <a href="https://chromewebstore.google.com/detail/scientific-symbols/iadclpbelegbpfdboochnffaacokfjid" target="_blank"> Scientific Symbols <i>(Chrome)</i> </a> </h2>
+                    <hr style="color: black;">
+                    <p>This extensions allows you to easily copy and paste custom symbols into your writing. By default there are some math symbols, but you can add anything you want through the "custom" section.</p>
+                    <p>You can download the extension through the chrome store by clicking the link above, or alternatively you can download the unpacked extension to view the source code and add it by enabling "developer mode" on chrome://extensions by clicking <a href="downloadable/Scientific Symbols.zip" download>here</a>. </p>
+                    <p class="note">NOTE! This extension is for Google Chrome.</p>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <a href="mailto:carter.clifton05@gmail.com"> <i id="hide-when-small" class="fa fa-fw fa-envelope"></i> carter.clifton05@gmail.com</a>
+            <a href="https://instagram.com/carter.clifton05/" target="_blank"> <i id="hide-when-small" class="fa fa-fw fa-instagram"></i> Instagram</a>
+            <a href="https://facebook.com/carter.clifton.75/" target="_blank"> <i id="hide-when-small" class="fa fa-fw fa-facebook"></i> Facebook</a>
+            <a href="https://github.com/carter-clifton/" target="_blank"> <i id="hide-when-small" class="fa fa-fw fa-github"></i> Github</a>
+        </div>
+        
+    </body>
+
+    <script src="display-switcher.js"></script>
+
+</html>
