@@ -23,7 +23,6 @@ function myMove() {
       pos--; 
       elem.style.left = pos + 'px';
       elem.style.top = 300 + 25 * Math.sin(pos/ (180 / Math.PI)) + 'px';
-      console.log(getWidth())
       if (pos < -330) {
         pos = getWidth();
       }
