@@ -66,10 +66,6 @@
 
 \tableofcontents
 
-\uchapter{Background of the Topic}
-
-
-
 \uchapter{Enchanced Entity-Relationship (EER) Diagram}
 
 \usection{EER Diagram}
@@ -1352,6 +1348,7 @@ FROM (
 ) AS people
 WHERE person_id = :person_id;
 \end{lstlisting}
+
 To use this, you would replace \textbf{:person\_id} with either a \textbf{student\_id}, \textbf{faculty\_id} or an \textbf{admin\_id}. Then, replace \textbf{:entered\_password} with the password for the person. If the ID and password are correct it will return ``Login Successful'', otherwise it will say there was a mistake. This is where our assumption that no subset of the \textbf{Person} entity can have the same ID, since it would cause issues with this system (if they also had the same password).
 
 \uchapter{SQL Sample Data}
