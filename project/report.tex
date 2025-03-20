@@ -361,6 +361,8 @@ CREATE TABLE IF NOT EXISTS faculty (
 );
     \end{lstlisting}
 
+    \pagebreak
+
     \item Course
     \begin{lstlisting}
 CREATE TABLE IF NOT EXISTS course (
@@ -481,8 +483,10 @@ CREATE TABLE IF NOT EXISTS courseblock (
 );
     \end{lstlisting}
     
-        \item CourseManagement
-        \begin{lstlisting}
+    \pagebreak
+
+    \item CourseManagement
+    \begin{lstlisting}
 CREATE TABLE IF NOT EXISTS course_management (
     admin_id INTEGER NOT NULL,
     course_id INTEGER NOT NULL,
@@ -492,7 +496,7 @@ CREATE TABLE IF NOT EXISTS course_management (
     FOREIGN KEY (admin_id) REFERENCES admin(admin_id),
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
-        \end{lstlisting}
+    \end{lstlisting}
 
     \item StudentManagement
     \begin{lstlisting}
@@ -512,6 +516,8 @@ CREATE TABLE IF NOT EXISTS student_management (
 \usection{Important Note}
 
 \textbf{We use bind variables in the following SQL statements to take the place of the information that will change each time the queries are run, for example student\_id, course\_id, etc. This is why some variables have a ``:'' in front of them.}
+
+\pagebreak
 
 \usection{Student Functionalities}
 
@@ -618,6 +624,8 @@ ORDER BY c.course_id, tb.timeblock_id;
     \begin{itemize}
         \item This query returns information about the courses a student is currently enrolled in, including the days and times their courses take place in.
     \end{itemize}
+
+    \pagebreak
     
     \item Check course prerequisites and availability before registering.
     \begin{lstlisting}
@@ -673,6 +681,9 @@ END;
     \begin{itemize}
         \item This statement creates a trigger, so that anytime the registration date is changed for a term, a notification / announcement will be made to notify all students.
     \end{itemize}
+
+    \pagebreak
+
     \begin{lstlisting}
 CREATE TRIGGER notify_students_on_syllabus_update
 AFTER UPDATE ON course
@@ -786,6 +797,8 @@ INSERT INTO notifications (title, content, date, courseID, facultyID) VALUES
 
 \end{itemize}
 
+\pagebreak
+
 \usection{Admin Functionalities}
 
 \begin{itemize}
@@ -808,6 +821,8 @@ INSERT INTO course_management (admin_id, course_id, action, date)
 VALUES (:admin_id, :course_id, "create new class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement creates a new class, adds it's prerequisites, assigns it a time, and records the action in the course\_management log table.
@@ -837,6 +852,8 @@ VALUES (:admin_id, NULL, "delete class", DATETIME('now'));
 PRAGMA foreign_keys = ON;
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement deletes a class from its database, and any references to it in the other tables with course\_id as a foreign key. The statement \textbf{PRAGMA foreign\_keys = OFF;} and \textbf{PRAGMA foreign\_keys = ON;} temporarily disable the foreign key validation so we can remove all the data before enabling the validation. In the course\_management table, any references to the deleted course will have their course\_id field updated to a \textit{NULL} value.
@@ -862,6 +879,8 @@ INSERT INTO course_management (admin_id, course_id, action, date)
 VALUES (:admin_id, :course_id, "update class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement allows an admin to update any details of a course (expect for it's courseID)
@@ -880,10 +899,14 @@ INSERT INTO course_management (admin_id, course_id, action, date)
 VALUES (:admin_id, :course_id, "update course prerequisites", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement allows an admin to add and remove prerequisites for a course.
     \end{itemize}
+
+    \pagebreak
     
     \item Manage student records, including registration status and academic history.
     \begin{lstlisting}
@@ -896,6 +919,8 @@ INSERT INTO student_management (admin_id, student_id, action, date)
 VALUES (:admin_id, :student_id, "remove student from class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement forces a student out of a course and records the action (and the admin who did it) in the student\_management table.
@@ -909,6 +934,8 @@ INSERT INTO student_management (admin_id, student_id, action, date)
 VALUES (:admin_id, :student_id, "put student in class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement enrolls a student in a course and records the action (and the admin who did it) in the student\_management table. This ignores any missing prerequisites or time conflicts. If you want to check for these, use the query in the student section.
@@ -924,6 +951,8 @@ INSERT INTO student_management (admin_id, student_id, action, date)
 VALUES (:admin_id, :student_id, "update grade", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
     \end{lstlisting}
     \begin{itemize}
         \item This statement updates a student's grade in a course and records the action (and the admin who did it) in the student\_management table.
@@ -992,6 +1021,8 @@ INSERT INTO course_management (admin_id, course_id, action, date)
 VALUES (102, 412, "create new class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
 \end{lstlisting}
 
 The following is a list of all the entries added to the affected tables: (To reiterate, all the data is coming from the SQL statements at the end of the report.)
@@ -1053,6 +1084,8 @@ The following is a list of all the entries added to the affected tables: (To rei
     \end{fullcenter}
 
 \end{itemize}
+
+\pagebreak
 
 \usection{Register a Student for a Course}
 
@@ -1189,6 +1222,8 @@ INSERT INTO course_management (admin_id, course_id, action, date)
 VALUES (102, 412, "update class", DATETIME('now'));
 
 COMMIT;
+
+END TRANSACTION;
 \end{lstlisting}
 
 The following is a list of all the entries / tables that were affected by this statement:
@@ -1268,6 +1303,8 @@ The output of this query is:
     \end{fullcenter}
 \end{itemize}
 
+\pagebreak
+
 The query to list all of the courses a student has the prerequisites for (and hasn't already passed) would be (I use the student with the student\_id of 201 in this example):
 
 \begin{lstlisting}
@@ -1329,6 +1366,8 @@ c.course_id, tb.timeblock_id, p.prereq_id;
         }
     \end{fullcenter}
 \end{itemize}
+
+\pagebreak
 
 \usection{Login System}
 
