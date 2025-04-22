@@ -1,81 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.8b2a47d1.ico">
-    <link rel="stylesheet" href="./index.7a7bc26b.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carter Clifton</title>
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
-    <navbar>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </navbar>
-    <main>
-      <header id="about">
-        <h1> Carter </h1>
-        <h1> Clifton </h1>
-      </header>
-      <blockquote id="projects">
-        <p> Projects </p>
-      </blockquote>
-      <section>
-        <h2> Numberdle </h2>
-        <i> Website </i>
-        <p> A number guessing game, like Wordle. </p>
-        <a href="https://carterclifton.ca/numberdle"> Visit the website </a>
-        <br>
-        <a href="https://github.com/carter-clifton/numberdle"> View the code </a>
-      </section>
-      <section class="right">
-        <h2> Char Counter </h2>
-        <i> Website </i>
-        <p> Counts how many characters you have typed. </p>
-        <a href="https://carterclifton.ca/charCounter"> Visit the website </a>
-        <br>
-        <a href="https://github.com/carter-clifton/charCounter"> View the code </a>
-      </section>
-      <section class="last-proj right">
-        <h2> Scientific Symbols </h2>
-        <i> Chrome Extension </i>
-        <p> Allows one to easily copy and paste scientific symbols into their writing. </p>
-        <a href="https://chromewebstore.google.com/detail/scientific-symbols/iadclpbelegbpfdboochnffaacokfjid"> Download the extension </a>
-      </section>
-      <blockquote id="contact">
-        <p> Contact </p>
-      </blockquote>
-      <section class="socials">
-        <p class="icon">
-          <a href="https://github.com/carter-clifton">
-            <i class="fa fa-github"></i> Github </a>
-        </p>
-      </section>
-      <section class="right socials">
-        <p class="icon">
-          <a href="https://www.instagram.com/carter.clifton05/">
-            <i class="fa fa-instagram"></i> Instagram </a>
-        </p>
-      </section>
-      <section class="socials">
-        <p class="icon">
-          <a href="https://www.facebook.com/carter.clifton.75/">
-            <i class="fa fa-facebook"></i> Facebook </a>
-        </p>
-      </section>
-      <section class="right socials">
-        <p class="icon">
-          <a href="mailto:carter.clifton05@gmail.com">
-            <i class="fa fa-envelope"></i> Email </a>
-        </p>
-      </section>
-      <footer>
-        <p>© 2025 Carter Clifton. All rights reserved</p>
-      </footer>
-    </main>
-    <script type="module" src="./index.b9774ca7.js"></script>
-  </body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carter Clifton</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fs-3" href="#">Carter Clifton</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h1 class="text-center mb-4">My Projects</h1>
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Numberdle</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">A number guessing game.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://carterclifton.ca/numberdle/">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Letterdle</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">A letter guessing game.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://carterclifton.ca/letterdle/">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Baleen Whales</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">Learn all about various baleen whales.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://baleenwhales.ca">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Character Counter</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">Count how many characters are in a text snippet.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://carterclifton.ca/charCounter/">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Brainfuck Interpreter</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">Run Brainfuck code and see memory addresses update in real-time.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://carterclifton.ca/bfInterpreter/">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pokémon Vault</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Website</i></p>
+                                <p class="card-text">View details about Pokémon.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://carterclifton.ca/pokemonVault/">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Scientific Symbols</h5>
+                                <p class="card-text" style="margin-bottom: 8px;"><i>Chrome Extension</i></p>
+                                <p class="card-text">Easily import scientific symbols into your writing.</p>
+                                <a class="btn btn-dark mt-auto" target="_blank" href="https://chromewebstore.google.com/detail/scientific-symbols/iadclpbelegbpfdboochnffaacokfjid">View Extension</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5" style="padding: 0!important;">
+            <div class="container">
+                <h1 class="text-center mb-4">Contact</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a class="btn btn-dark fs-3" style="width: 15rem;" href="https://www.instagram.com/carter.clifton05/" target="_blank">Instagram</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="btn btn-dark fs-3" style="width: 15rem;" href="https:f//github.com/carter-clifton/" target="_blank">Github</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="btn btn-dark fs-3" style="width: 15rem;" href="https://www.facebook.com/carter.clifton.75/" target="_blank">Facebook</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="btn btn-dark fs-3" style="width: 15rem;" href="mailto:carter.clifton05@gmail.com" target="_blank">Email</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-dark text-white text-center py-3 mt-4">
+            <p class="mb-0 fs-4">&copy; 2025 Carter Clifton. All rights reserved.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
 </html>
