@@ -220,7 +220,10 @@ function copyResults() {
             textToCopy += "X / 6 Guesses\n";
         }
         for (let i = 0; i < maxAttempts; i++) {
-            textToCopy += guessHistory[i].join("") + "\n";
+            guessLine = guessHistory[i].join("") + "\n";
+            if (guessLine != "") {
+                textToCopy += guessHistory[i].join("") + "\n";
+            }
         }
         copyToClipboard(textToCopy);
     } else {
