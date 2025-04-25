@@ -219,10 +219,10 @@ function copyResults() {
         } else {
             textToCopy += "X / 6 Guesses\n";
         }
-        for (let i = 0; i < maxAttempts; i++) {
+        for (let i = 0; i < Math.min(currentRow + 1, maxAttempts); i++) {
             guessLine = guessHistory[i].join("") + "\n";
             if (guessLine != "") {
-                textToCopy += guessHistory[i].join("") + "\n";
+                textToCopy += guessLine;
             }
         }
         copyToClipboard(textToCopy);
