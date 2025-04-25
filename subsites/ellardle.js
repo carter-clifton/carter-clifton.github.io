@@ -215,13 +215,13 @@ function copyResults() {
         textToCopy = "";
         textToCopy += `Ellardle #${daysSinceStart()}\n`
         if (gameState == "win") {
-            textToCopy += `${currentRow + 1} / 6 Guesses\n`;
+            textToCopy += `${currentRow + 1} / 6 Guesses`;
         } else {
-            textToCopy += "X / 6 Guesses\n";
+            textToCopy += "X / 6 Guesses";
         }
-        for (let i = 0; i < Math.min(currentRow + 1, maxAttempts); i++) {
-            guessLine = guessHistory[i].join("") + "\n";
-            if (guessLine != "") {
+        for (let i = 0; i < maxAttempts; i++) {
+            guessLine = "\n" + guessHistory[i].join("");
+            if (guessLine != "\n") {
                 textToCopy += guessLine;
             }
         }
