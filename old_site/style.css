@@ -1,0 +1,9 @@
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card .btn {
+    width: auto;
+    align-self: start;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carter Clifton</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+
+        <canvas id="chalkboard"></canvas>
+
+        <div id="sidePanel" class="sidePanel">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+            <hr>
+            <img src="assets/black_marker.webp" onclick="selectTool('black')">
+            <hr>
+            <img src="assets/red_marker.webp" onclick="selectTool('red')">
+            <hr>
+            <img src="assets/blue_marker.webp" onclick="selectTool('blue')">
+            <hr>
+            <img src="assets/green_marker.webp" onclick="selectTool('green')">
+            <hr>
+            <img src="assets/eraser.webp" onclick="selectTool('eraser')">
+            <hr>
+            <a class="clearButton" onclick="clearCanvas()">Clear Whiteboard</a>
+            <hr>
+            <div>
+                <p>Width</p>
+                <input type="range" min="1" max="7" value="2" class="slider" id="markerWidth">
+            </div>
+            <hr>
+        </div>
+
+        <button class="openButton" onclick="openNav()">&#10095;</button>
+
+        <div class="dockContainer">
+            <a href="index.html">Return to Home</a>
+        </div>
+
+        <script src="404.js"></script>
+
+    </body>
+
+</html>
